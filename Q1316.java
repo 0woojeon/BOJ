@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class Q1316 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int groupcnt = 0;
+
+        for (int i = 0; i < N; i++) {
+            String words = sc.next();
+            boolean[] arr = new boolean[26]; // 알파벳 개수
+            boolean check = true;
+
+            for (int j = 0; j < words.length(); j++) {
+                int alpcheck = words.charAt(j) - 97; // 아스키코드 a = 97
+
+                if (arr[alpcheck]) {
+                    if (words.charAt(j) != words.charAt(j - 1)) {
+                        check = false;
+                        break;
+                    }
+                } else {
+                    arr[alpcheck] = true;
+                }
+            }
+            if (check) {
+                groupcnt++;
+            }
+        }
+        System.out.println(groupcnt);
+
+    }
+}
