@@ -16,7 +16,7 @@ public class Q1316 {
                 int alpcheck = words.charAt(j) - 97; // 아스키코드 a = 97
 
                 if (arr[alpcheck]) {
-                    if (words.charAt(j) != words.charAt(j - 1)) {
+                    if (words.charAt(j) != words.charAt(j - 1)) { // 이미 등장한 알파벳이 바로 전의 알파벳과 다르다 == 그룹함수 x
                         check = false;
                         break;
                     }
