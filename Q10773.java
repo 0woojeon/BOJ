@@ -17,7 +17,7 @@ public class Q10773 {
         }
 
         for (int j : stack) {
-            result += 0;
+            result += j;
         }
         System.out.println(result);
     }
