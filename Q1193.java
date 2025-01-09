@@ -7,23 +7,23 @@ public class Q1193 {
 
         int x = 1; // 분자
         int y = 1; // 분모
-        int dir = 1; // 1일 때는 위쪽으로, -1일 때는 아래쪽으로
+        int dir = 1; 
 
         if (n>= 1 && n<=10000000){
             for (int i = 1; i < n; i++) {
-                if (dir == -1) { // 위쪽으로 이동
-                    if (y == 1) { // 분모가 1이면 방향 전환
+                if (dir == -1) { 
+                    if (y == 1) { 
                         dir = 1;
                         x++;
-                    } else { // 분자로 이동
+                    } else { 
                         x++;
                         y--;
                     }
-                } else { // 아래쪽으로 이동
-                    if (x == 1) { // 분자가 1이면 방향 전환
+                } else { 
+                    if (x == 1) { 
                         dir = - 1;
                         y++;
-                    } else { // 분모로 이동
+                    } else {
                         x--;
                         y++;
                     }
