@@ -14,15 +14,18 @@ public class Q10798 {
             }
         }
 
+        StringBuilder result = new StringBuilder();
+
         // 세로로 읽기
         for(int j = 0; j < 15; j++) {
             for (int i = 0; i < 5; i++) {
-                if (j < arr[i].length) { // 현재 단어의 길이를 확인
-                    System.out.print(arr[i][j]); // 유효한 문자 출력
+                if (arr[i][j] != 0) { // arr[i][j]가 유효한 문자일 때
+                    result.append(arr[i][j]);
                 }
             }
         }
 
+        System.out.print(result.toString()); // 결과 출력
         br.close();
     }
 }
