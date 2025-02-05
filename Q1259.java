@@ -17,6 +17,7 @@ public class Q1259 {
 			}else{
 				System.out.println("no");
 			}
+			
 		}
 	}
 
